@@ -87,10 +87,10 @@ def generate_nessus_key(app_type):
 
 def register_nessus(os, key):
     if(os == 1):
-        system("/opt/nessus/sbin/nessuscli fetch --register " + key)
+        system("/opt/nessus/sbin/nessuscli fetch --register-only " + key)
         print("Nessus Registered Successfully")
     elif(os == 2):
-        system('"C:\\Program Files\\Tenable\\Nessus\\nessuscli.exe" fetch --register ' + key)
+        system('"C:\\Program Files\\Tenable\\Nessus\\nessuscli.exe" fetch --register-only ' + key)
         print("Nessus Registered Successfully")
 def detect_os():
     system = platform.system().lower()
