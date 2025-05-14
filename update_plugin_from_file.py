@@ -10,7 +10,7 @@ def find_plugin_files(os_type):
     elif(os_type == 2):  # Windows
         downloads_path = str(Path.home() / "Downloads")
     
-    pattern = os.path.join(downloads_path, "all-*.tar")
+    pattern = os.path.join(downloads_path, "all-*.tar.gz")
     return glob.glob(pattern)
 
 def update_nessus_plugins_from_file(os_type, plugin_files):
